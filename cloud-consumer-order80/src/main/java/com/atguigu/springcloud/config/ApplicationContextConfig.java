@@ -10,7 +10,7 @@ public class ApplicationContextConfig {
 
     //applicationContext.xml <bean id="" class="">   作用类似
     @Bean
-    @LoadBalanced
+//    @LoadBalanced
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
