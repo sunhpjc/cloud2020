@@ -20,6 +20,7 @@ public class PaymentHystrixController {
     private PaymentHystrixService paymentHystrixService;
 
     @GetMapping("/consumer/payment/hystrix/ok/{id}")
+//    @HystrixCommand
     public String paymentInfo_OK(@PathVariable("id")Long id){
         String result = paymentHystrixService.paymentInfo_OK(id);
         log.info("*****result:"+result);
@@ -41,6 +42,10 @@ public class PaymentHystrixController {
         return "我只消费者80，我只能接受1.5s延迟";
     }
 
+    /**
+     * 全局通用fallback
+     * @return
+     */
     public String paymentGlobalFallbackMethod(){
         return "我是消费者80，我是全局fallback";
     }

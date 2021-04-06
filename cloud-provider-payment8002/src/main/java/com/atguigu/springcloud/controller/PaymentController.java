@@ -64,4 +64,14 @@ public class PaymentController {
         return this.discoveryClient;
     }
 
+    //========GateWay相关测试
+    @GetMapping(value = "/payment/get/get")
+    public String get(){
+        return serverPort+"get";
+    }
+
+    @GetMapping(value = "/payment/lb/lb")
+    public String lb(){
+        return serverPort+"lb";
+    }
 }
