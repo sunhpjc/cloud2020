@@ -89,4 +89,14 @@ public class PaymentController {
     public String lb(){
         return serverPort+"lb";
     }
+
+
+    /**
+     * 链路追踪测试
+     * @return
+     */
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin(){
+        return "hi，I am zipkin";
+    }
 }
